@@ -1,13 +1,9 @@
 import os
-# from config import apikey
 import streamlit as st
 from langchain.llms import OpenAI
 import speech_recognition as sr
-# from gtts import gTTS
-import requests
+
 from io import BytesIO
-# from pydub import AudioSegment
-# from pydub.playback import play
 from audio import speak
 
 from dotenv import load_dotenv

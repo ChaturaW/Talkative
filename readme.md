@@ -32,7 +32,7 @@ NOTE: The following dependencies will be installed:
 
 ### Update the OpenAI API key
 
-Create an environment file named `.env` inside the root folder and set the OpenAI API key inside the file. For e.g: 
+Create an environment file (`.env`) inside the root folder and set the OpenAI API key inside it as below: 
 
 ```
 apikey = 'my-api-key'
@@ -40,6 +40,8 @@ apikey = 'my-api-key'
 
 
 ## Running the app
+
+Run the following command inside the root folder. If everything is fine, you should hear the voice of the AI bot. 
 
 ```
 streamlit run app.py

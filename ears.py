@@ -7,9 +7,11 @@ class SpeechRecognitionError(Exception):
 
 def listen(): 
     try:         
-      with sr.Microphone() as source:      
+      with sr.Microphone() as source:  
+          print("r.listen..")    
           audio = r.listen(source)       
           # Convert the speech to text
+          print("r.recognize_google..")
           text = r.recognize_google(audio)
           return text
     except sr.UnknownValueError:

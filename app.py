@@ -8,24 +8,41 @@ from mind import think
 title = "Speak now.."
 
 st.title("Hello, let's talk")
-conversation_history = ""
-prompt = ""
+last_response = ""
+person_said = ""
 
+no_response_count = 0
 
-while True:   
-    response = think(prompt, conversation_history)
+while True:  
+    print("started thinking...") 
+    new_response = think(person_said, last_response)
+    print("ended thinking!") 
     
-    st.write(response)  
+    st.write(new_response)  
     
-    speak(response)    
+    print("started speaking...")
+    speak(new_response)    
+    print("ended speaking!")
+    
+    if "goodbye" in new_response.lower():
+        break
 
     try:
-        textHeard = listen()
-        prompt = textHeard
-        st.write(f"You: {textHeard}")
-        conversation_history += f"\n person: {textHeard}\n Sarah: {response}\n"
-    except SpeechRecognitionError as e:
-        errorMessage = str(e)
-        st.write(errorMessage)
+        print("listening started...")
+        person_said = listen()
+        print("listening over!")
+          
+        st.write(f"You: {person_said}")        
+        last_response = new_response
+    except SpeechRecognitionError as e:        
+        errorMessage = str(e)        
+        st.write(errorMessage)        
+        no_response_count += 1
+        if no_response_count < 2:
+            speak(errorMessage)
+        else:
+            speak("I'm sorry, I can't hear you. let's talk later. Goodbye.")
+            break   
+    
    
-
+print("end conversation!")

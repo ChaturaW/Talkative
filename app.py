@@ -3,7 +3,7 @@ import streamlit as st
 
 from mouth import speak
 from ears import listen, SpeechRecognitionError
-from mind import think
+from mind import think, initialize_conversation, end_conversation
 
 title = "Speak now.."
 
@@ -12,6 +12,7 @@ last_response = ""
 person_said = ""
 
 no_response_count = 0
+initialize_conversation()
 
 while True:  
     print("started thinking...") 
@@ -42,7 +43,7 @@ while True:
             speak(errorMessage)
         else:
             speak("I'm sorry, I can't hear you. let's talk later. Goodbye.")
-            break   
-    
-   
+            break       
+
+end_conversation()  
 print("end conversation!")

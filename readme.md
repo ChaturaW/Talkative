@@ -15,7 +15,7 @@ source <env_name>/bin/activate
 ```
 
 ### Install dependencies
-Install the dependencies using the following command:
+Install the dependencies:
 
 NOTE: The following dependencies will be installed:
 `streamlit`, 

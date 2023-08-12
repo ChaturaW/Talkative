@@ -17,10 +17,6 @@ source <env_name>/bin/activate
 ### Install dependencies
 Install the dependencies using the following command:
 
-```
-pip install -r requirements.txt
-```
-
 NOTE: The following dependencies will be installed:
 `streamlit`, 
 `langchain`, 
@@ -29,6 +25,13 @@ NOTE: The following dependencies will be installed:
 `pydub`, 
 `python-dotenv`, 
 `openai`
+
+NOTE in Ubuntu the following dependencies might need to be installed before installing the pyaudio. 
+
+```sudo apt-get install libasound-dev portaudio19-dev libportaudio2 libportaudiocpp0```
+
+Refer: https://gist.github.com/diegopacheco/d5d4507988eff995da297344751b095e
+
 
 ### Update the OpenAI API key
 

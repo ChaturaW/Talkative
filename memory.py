@@ -71,5 +71,5 @@ def rememberLongTerm():
 def organiseLongTermMemory(memory):
     eraseLongTermMemory()
     initialize()
-    faissDb.add_texts([memory])    
+    faissDb.add_texts([memory])  
     faissDb.save_local(VECTOR_DB_DIR)

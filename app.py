@@ -39,7 +39,7 @@ while True:
         errorMessage = str(e)        
         st.write(errorMessage)        
         no_response_count += 1
-        if no_response_count < 2:
+        if no_response_count < 3:
             speak(errorMessage)
         else:
             speak("I'm sorry, I can't hear you. let's talk later. Goodbye.")

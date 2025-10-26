@@ -63,7 +63,8 @@ def end_conversation():
     # memory = recallLongTermMemories()
     # print("current memory:\n" + memory)
     # prompt = f"Summarize the following conversation: {memory}"
-    # openAILLM = OpenAI(temperature=0.9, model_name="gpt-3.5-turbo")
+    # # openAILLM = OpenAI(temperature=0.9, model_name="gpt-3.5-turbo")
+    # openAILLM = OpenAI(temperature=0.9)
 
     # with get_openai_callback() as cb:        
     #     summary = openAILLM(prompt)
